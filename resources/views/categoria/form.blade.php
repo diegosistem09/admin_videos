@@ -1,5 +1,4 @@
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
 <h1>{{$modo}} Categoria</h1>
 
 <label for="categoria">Nombre de la categoria</label>

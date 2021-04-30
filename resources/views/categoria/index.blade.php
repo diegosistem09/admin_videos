@@ -2,6 +2,11 @@
 {{Session::get('mensaje')}}
     
 @endif
+
+@extends('layouts.app')
+@section('content')
+<div class="container">
+	
 <a href="{{url('categoria/create')}}">Registrar nuevo empleado</a>
 <table class="table">
 	<thead>
@@ -30,3 +35,4 @@
 		
 	</tbody>
 </table>				
+</div>

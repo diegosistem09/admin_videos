@@ -14,10 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 
 Route::resource('/video',App\Http\Controllers\VideoController::class);
 
 Route::resource('/categoria',App\Http\Controllers\CategoriaController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['middleware' => 'auth'],function(){
+	Route::get('/', [App\Http\Controllers\VideoController::class,'index'])->name('home');
+});
